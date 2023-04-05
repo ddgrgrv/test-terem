@@ -1,0 +1,9 @@
+.inner-selects{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.json-container{
+    display: flex;
+    flex-direction: column;
+}

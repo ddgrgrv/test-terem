@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/form-style.css">
+    <title>Форма</title>
+</head>
+<body>
+    <div class="container">
+        <form  id="form" class="mt-5 needs-validation" novalidate action="index.php" method="post">
+            <h1 class="h1 mb-5">Тестовое задание по работе с формами</h1>
+            <div class="inner-selects">
+                <select required  name="select-1" class="form-select form-select-sm mb-3" aria-label="Default select example">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <select required  name="select-2" class="form-select form-select-sm mb-3" aria-label="Default select example">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <select required  name="select-3" class="form-select form-select-sm mb-3" aria-label="Default select example">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <select required  name="select-4" class="form-select form-select-sm mb-3" aria-label="Default select example">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <select required  name="select-5" class="form-select form-select-sm mb-3" aria-label="Default select example">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form-floating mb-3">
+                <textarea required  name="feedback" id="feedback" class="form-control" placeholder="Leave a feedback here" style="height: 100px"></textarea>
+                <label for="floatingTextarea2">Напишите отзыв о тестовом задании</label>
+            </div>
+            <div class="form-floating mb-3">
+                <textarea required  name="comment" id="comment" class="form-control" placeholder="Leave a comment here" style="height: 100px"></textarea>
+                <label for="floatingTextarea2">Ваши рекомендации</label>
+            </div>
+        </form>
+        <button type="submit" class="btn btn-success">Отправить</button>
+    </div>
+    <div class="json-container container"></div>
+    <script defer type="module" src="./form.js"></script>
+</body>
+</html>
