@@ -40,6 +40,9 @@
 .second-row .flex__row__item:nth-child(2){
     border: 1px dashed black;
 }
+.animate{
+    transform: translateX(100%);
+}
 .order{
     order: -1;
 }
@@ -61,6 +64,9 @@
     align-items: center;
     flex-direction: column;
     margin-top: 5vh;
+}
+.remove{
+    display: none;
 }
 @media(max-width: 768px){
     

@@ -5,7 +5,6 @@ const btnSubmit = document.querySelector('.btn'),
     div = document.querySelector('.json-container');
 
 
-
 function validation(){
     let elements = document.getElementById("form").elements;
     Array.from(elements)
@@ -14,17 +13,9 @@ function validation(){
       const { name, value } = element;
       if(element.value != ''){
         btnSubmit.disabled = false;
-    }
-    else{
-        btnSubmit.disabled = true;
-    }
-});
-
-
-    
-        
-        
-
+        }
+        else{btnSubmit.disabled = true;}
+    });
 }
 
 function DataItem(comment,feedback,value) {
@@ -54,9 +45,7 @@ function createData(){
     return jsonData;
 }
 
-
 setInterval(validation, 100);
-
 
 
 btnSubmit.addEventListener('click', async (e)=>{
@@ -74,12 +63,8 @@ btnSubmit.addEventListener('click', async (e)=>{
         });
     
     if (res.ok) { 
-            let json = await res.json();
-            alert(json);
-        } else {
-            alert("Ошибка HTTP: " + res.status);
-        }
-
-    
-
+        let json = await res.json();
+        alert(json);
+    } 
+    else {alert("Ошибка HTTP: " + res.status);}
 });
