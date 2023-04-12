@@ -10,7 +10,6 @@ function validation(){
     Array.from(elements)
     .filter((item) => !!item.name)
     .map((element) => {
-      const { name, value } = element;
       if(element.value != ''){
         btnSubmit.disabled = false;
         }

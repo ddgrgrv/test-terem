@@ -5,6 +5,15 @@ const btnCloseModal = document.getElementById('close-modal'),
       firstRow = document.querySelector('.first-row'),
       secondItem = document.getElementById('item-2');
 
+function createModal(){
+    modal.style.display = 'flex';
+}
+
+function closeModal(){
+    modal.style.display = 'none';
+    document.querySelector('.modal-container').remove();
+}
+
 function hideBlock(item){
     item.classList.toggle('remove');
 }
@@ -13,14 +22,9 @@ function replaceBlock(item){
     item.classList.toggle('order');
 }
 
-document.addEventListener("DOMContentLoaded", ()=>{
-    modal.style.display = 'flex';
-});
+document.addEventListener("DOMContentLoaded", createModal);
 
-btnCloseModal.addEventListener('click', ()=>{
-    modal.style.display = 'none';
-    document.querySelector('.modal-container').remove();
-});
+btnCloseModal.addEventListener('click', closeModal);
 
 btnWarning.addEventListener('click', ()=>{
     hideBlock(firstRow);
@@ -29,3 +33,4 @@ btnWarning.addEventListener('click', ()=>{
 btnSuccess.addEventListener('click', ()=>{
     replaceBlock(secondItem);
 });
+

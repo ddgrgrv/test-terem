@@ -40,9 +40,6 @@
 .second-row .flex__row__item:nth-child(2){
     border: 1px dashed black;
 }
-.animate{
-    transform: translateX(100%);
-}
 .order{
     order: -1;
 }
