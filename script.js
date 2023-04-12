@@ -1,21 +1,36 @@
-$(".btn-warning").on( "click", function(event) {
-  $(".first-row").toggle("slow");
+const btnCloseModal = document.getElementById('close-modal'),
+      modal = document.getElementById('modal'),
+      btnWarning = document.querySelector('.btn-warning'),
+      btnSuccess = document.querySelector('.btn-success'),
+      firstRow = document.querySelector('.first-row'),
+      secondItem = document.getElementById('item-2');
+
+function createModal(){
+    modal.style.display = 'flex';
+}
+
+function closeModal(){
+    modal.style.display = 'none';
+    document.querySelector('.modal-container').remove();
+}
+
+function hideBlock(item){
+    item.classList.toggle('remove');
+}
+
+function replaceBlock(item){
+    item.classList.toggle('order');
+}
+
+document.addEventListener("DOMContentLoaded", createModal);
+
+btnCloseModal.addEventListener('click', closeModal);
+
+btnWarning.addEventListener('click', ()=>{
+    hideBlock(firstRow);
 });
 
-$(".btn-success").on( "click", function() {
-    $("#item-2").hide("slow");
-    $("#item-1").hide("slow");
-    $("#item-2").toggleClass("order");
-    $("#item-2").show("slow");
-    $("#item-1").show("slow");
+btnSuccess.addEventListener('click', ()=>{
+    replaceBlock(secondItem);
 });
 
-
-$(document).ready(function(){
-    $("#modal").css({"display": "flex"});
-
-    $("#close-modal").on( "click", function(event) {
-        $("#modal").css({"display": "none"});
-        $(".modal-container").css({"display": "none"});
-    });
-});
