@@ -57,7 +57,7 @@ btnSubmit.addEventListener('click', async (e)=>{
     
     let res = await fetch('/server/server.js', {
           method: 'POST',
-          headers: { 'Content-Type': 'multipart/form-data' },
+          headers: { 'Content-Type': 'application/json' },
           body: data,
         });
     
