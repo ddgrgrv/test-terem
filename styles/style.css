@@ -44,6 +44,7 @@
     order: -1;
 }
 .modal-container{
+    display: none;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -53,6 +54,7 @@
     background-color: rgba(0, 0, 0, 0.634);
 }
 .modal{
+    display: flex;
     width: 40vw;
     height: 40vh;
     z-index: 10;
@@ -61,6 +63,9 @@
     align-items: center;
     flex-direction: column;
     margin-top: 5vh;
+}
+.visible{
+    display: flex;
 }
 .remove{
     display: none;
