@@ -1,36 +1,27 @@
 const btnCloseModal = document.getElementById('close-modal'),
-      modal = document.getElementById('modal'),
+      modalContainer = document.querySelector('.modal-container'),
       btnWarning = document.querySelector('.btn-warning'),
       btnSuccess = document.querySelector('.btn-success'),
       firstRow = document.querySelector('.first-row'),
       secondItem = document.getElementById('item-2');
 
 function createModal(){
-    modal.style.display = 'flex';
+    modalContainer.classList.toggle('visible');
 }
 
-function closeModal(){
-    modal.style.display = 'none';
-    document.querySelector('.modal-container').remove();
+function hideBlock(){
+    firstRow.classList.toggle('remove');
 }
 
-function hideBlock(item){
-    item.classList.toggle('remove');
-}
-
-function replaceBlock(item){
-    item.classList.toggle('order');
+function replaceBlock(){
+    secondItem.classList.toggle('order');
 }
 
 document.addEventListener("DOMContentLoaded", createModal);
 
-btnCloseModal.addEventListener('click', closeModal);
+btnCloseModal.addEventListener('click', createModal);
 
-btnWarning.addEventListener('click', ()=>{
-    hideBlock(firstRow);
-});
+btnWarning.addEventListener('click', hideBlock);
 
-btnSuccess.addEventListener('click', ()=>{
-    replaceBlock(secondItem);
-});
+btnSuccess.addEventListener('click', replaceBlock);
 
